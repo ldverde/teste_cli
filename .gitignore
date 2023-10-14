@@ -3,3 +3,4 @@ node_modules
 .cliente.http
 .kkk.http
 dev.sqlite
+db
