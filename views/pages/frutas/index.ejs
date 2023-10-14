@@ -1,0 +1,6 @@
+<%- contentFor('body') %>
+    <ul>
+        <%  frutas.forEach( function (fruta) { %>
+        <li><%=fruta.nome%> (<%=fruta.preco%>)</li>
+        <% }) %>
+    </ul>
