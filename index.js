@@ -1,6 +1,6 @@
 const express = require('express')
 const rotaProduto = require('./rotas/rotas_express')
-var expressLayouts = require('express-ejs-layouts')
+const expressLayouts = require('express-ejs-layouts')
 const indexRoute = require('./rotas/index.produtos')
 const rotaCliente = require('./rotas/cliente.rota.express')
 const helmet = require('helmet');
