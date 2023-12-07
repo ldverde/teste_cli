@@ -4,10 +4,11 @@ const expressLayouts = require('express-ejs-layouts')
 const indexRoute = require('./rotas/index.produtos')
 const rotaCliente = require('./rotas/cliente.rota.express')
 const helmet = require('helmet');
+const cors = require('cors');
 
 require('dotenv').config()
 const app = express()
-
+app.use(cors());
 app.use(helmet());
 app.use(express.json())
 
@@ -17,6 +18,8 @@ app.use('/api/clientes', rotaCliente)
 app.use('/', indexRoute)
 
 app.use('/static', express.static('public'))
+
+app.use(cors({origin: '*'}));
 
 app.set('view engine', 'ejs')
 
